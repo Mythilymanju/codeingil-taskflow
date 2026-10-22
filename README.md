@@ -27,6 +27,7 @@ API base URL: http://127.0.0.1:8000/api
 ## Progress
 - Day 1: health endpoint and responsive app shell
 - Day 2: projects table, seeder, GET list/detail endpoints, Projects page
+- Day 3: create and edit projects with server-side validation and inline form errors
 
 ## Day 1 Evidence
 
@@ -60,6 +61,20 @@ API base URL: http://127.0.0.1:8000/api
 6. Axios receives the JSON, setProjects(res.data.data) updates state
 7. React re-renders: projects.map() creates one ProjectCard per project
 ```
+
+## Day 3 Evidence
+
+### React Project creation Page
+![Project Page](docs/screenshots/day-03-new-project-creation.png)
+
+### Postman: create project
+![Postman list](docs/screenshots/day-03-postman-create.png)
+
+### Postman: validation error (422)
+![Postman list](docs/screenshots/day-03-postman-422.png)
+
+### Postman: update project
+![Postman list](docs/screenshots/day-03-postman-update.png)
 
 
 

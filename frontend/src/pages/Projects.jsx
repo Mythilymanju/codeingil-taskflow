@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import ProjectCard from '../components/ProjectCard'
 import { getProjects } from '../services/projectService'
 
@@ -16,7 +17,15 @@ export default function Projects() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-4">Projects</h2>
+     <div className="flex items-center justify-between mb-4">
+  <h2 className="text-2xl font-bold">Projects</h2>
+  <Link
+    to="/projects/new"
+    className="rounded bg-brand text-ink font-semibold px-4 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink"
+  >
+    New project
+  </Link>
+</div>
 
       {loading && <p>Loading projects...</p>}
 

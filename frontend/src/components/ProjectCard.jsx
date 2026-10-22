@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const statusStyles = {
   planned: 'bg-gray-200 text-ink',
   active: 'bg-brand text-ink',
@@ -21,6 +23,12 @@ export default function ProjectCard({ project }) {
       {project.user && (
         <p className="text-xs text-black/60">Owner: {project.user.name}</p>
       )}
+      <Link
+        to={`/projects/${project.id}/edit`}
+        className="mt-2 text-sm font-semibold underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+      >
+        Edit
+      </Link>
     </article>
   )
 }
