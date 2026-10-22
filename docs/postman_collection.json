@@ -11,14 +11,32 @@
       "name": "Health check",
       "request": {
         "method": "GET",
-        "header": [
-          { "key": "Accept", "value": "application/json" }
-        ],
-        "url": {
-          "raw": "{{base_url}}/api/health",
-          "host": ["{{base_url}}"],
-          "path": ["api", "health"]
-        }
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/api/health", "host": ["{{base_url}}"], "path": ["api", "health"] }
+      }
+    },
+    {
+      "name": "List projects",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/api/projects", "host": ["{{base_url}}"], "path": ["api", "projects"] }
+      }
+    },
+    {
+      "name": "Show project 1",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/api/projects/1", "host": ["{{base_url}}"], "path": ["api", "projects", "1"] }
+      }
+    },
+    {
+      "name": "Show missing project (404)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/api/projects/999", "host": ["{{base_url}}"], "path": ["api", "projects", "999"] }
       }
     }
   ]

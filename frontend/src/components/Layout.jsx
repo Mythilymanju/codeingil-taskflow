@@ -1,27 +1,29 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+
+const linkClass = ({ isActive }) =>
+  `block rounded px-3 py-2 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand ${
+    isActive ? 'bg-brand text-ink' : 'text-white hover:bg-white/10'
+  }`
 
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false)
 
   return (
     <div className="min-h-screen md:flex">
-      <aside className={`${open ? 'block' : 'hidden'} md:block w-full md:w-60 bg-ink text-white p-4`}>
+      <aside
+        className={`${open ? 'block' : 'hidden'} md:block w-full md:w-60 bg-ink text-white p-4`}
+      >
         <h1 className="text-xl font-bold mb-6">
           Task<span className="text-brand">Flow</span>
         </h1>
         <nav className="space-y-2">
-          <a
-            href="#"
-            className="block rounded px-3 py-2 bg-brand text-ink font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-          >
+          <NavLink to="/" end className={linkClass} onClick={() => setOpen(false)}>
             Dashboard
-          </a>
-          <a
-            href="#"
-            className="block rounded px-3 py-2 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-          >
+          </NavLink>
+          <NavLink to="/projects" className={linkClass} onClick={() => setOpen(false)}>
             Projects
-          </a>
+          </NavLink>
         </nav>
       </aside>
 
