@@ -10,14 +10,30 @@ use Illuminate\Validation\Rule;
 
 class ProjectController extends Controller
 {
-    public function index()
-    {
-        $projects = Project::with('user:id,name')
-            ->orderBy('id')
-            ->get();
+   public function index(Request $request)
+{
+    $request->validate([
+        'search' => ['nullable', 'string', 'max:100'],
+        'per_page' => ['nullable', 'integer', 'min:1', 'max:50'],
+    ]);
 
-        return response()->json(['data' => $projects]);
+    $query = Project::with('user:id,name');
+
+    $search = trim((string) $request->query('search', ''));
+    if ($search !== '') {
+        // escape % and _ so users can search for them literally
+        $escaped = addcslashes($search, '\\%_');
+        $query->where('name', 'like', "%{$escaped}%");
     }
+
+    $projects = $query
+        ->orderByDesc('created_at')
+        ->orderByDesc('id')
+        ->paginate($request->integer('per_page', 6))
+        ->withQueryString();
+
+    return response()->json($projects);
+}
 
     public function show(Project $project)
     {
@@ -47,6 +63,13 @@ class ProjectController extends Controller
 
         return response()->json(['data' => $project]);
     }
+
+    public function destroy(Project $project)
+{
+    $project->delete();
+
+    return response()->noContent();
+}
 
     private function rules(): array
     {
