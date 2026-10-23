@@ -28,6 +28,7 @@ API base URL: http://127.0.0.1:8000/api
 - Day 1: health endpoint and responsive app shell
 - Day 2: projects table, seeder, GET list/detail endpoints, Projects page
 - Day 3: create and edit projects with server-side validation and inline form errors
+- Day 4: delete, search, pagination, success and error feedback
 
 ## Day 1 Evidence
 
@@ -76,5 +77,28 @@ API base URL: http://127.0.0.1:8000/api
 ### Postman: update project
 ![Postman list](docs/screenshots/day-03-postman-update.png)
 
+
+## Day 4 Evidence
+
+### Delete confirmation
+![Delete confirmation](docs/screenshots/day-04-delete-confirm.png)
+
+### Delete success message
+![Delete success](docs/screenshots/day-04-delete-success.png)
+
+### Search
+![Search](docs/screenshots/day-04-search.png)
+
+### Pagination
+![Pagination](docs/screenshots/day-04-pagination.png)
+
+### Postman: 404 (missing record)
+![Postman 404](docs/screenshots/day-04-postman-404.png)
+
+### Postman: 422 (invalid input)
+![Postman 422](docs/screenshots/day-04-postman-422.png)
+
+### Postman: 204 (successful delete)
+![Postman 204](docs/screenshots/day-04-postman-delete-204.png)
 
 

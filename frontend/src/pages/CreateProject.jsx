@@ -7,7 +7,7 @@ export default function CreateProject() {
 
   const handleSubmit = async (values) => {
     await createProject(values)
-    navigate('/projects')
+    navigate('/projects', { state: { message: 'Project created.' } })
   }
 
   return (

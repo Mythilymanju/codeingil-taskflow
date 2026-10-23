@@ -6,13 +6,16 @@ const statusStyles = {
   completed: 'bg-ink text-white',
 }
 
-export default function ProjectCard({ project }) {
+const actionClass =
+  'text-sm font-semibold underline focus:outline-none focus-visible:ring-2 focus-visible:ring-ink'
+
+export default function ProjectCard({ project, onDelete }) {
   return (
-    <article className="bg-white rounded-lg shadow p-5 flex flex-col gap-2">
+    <article className="flex flex-col gap-2 rounded-lg bg-white p-5 shadow">
       <div className="flex items-start justify-between gap-2">
-        <h3 className="font-bold text-lg">{project.name}</h3>
+        <h3 className="text-lg font-bold">{project.name}</h3>
         <span
-          className={`text-xs font-semibold px-2 py-1 rounded-full capitalize ${statusStyles[project.status]}`}
+          className={`rounded-full px-2 py-1 text-xs font-semibold capitalize ${statusStyles[project.status]}`}
         >
           {project.status}
         </span>
@@ -23,12 +26,23 @@ export default function ProjectCard({ project }) {
       {project.user && (
         <p className="text-xs text-black/60">Owner: {project.user.name}</p>
       )}
-      <Link
-        to={`/projects/${project.id}/edit`}
-        className="mt-2 text-sm font-semibold underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-      >
-        Edit
-      </Link>
+      <div className="mt-2 flex gap-4">
+        <Link
+          to={`/projects/${project.id}/edit`}
+          aria-label={`Edit ${project.name}`}
+          className={actionClass}
+        >
+          Edit
+        </Link>
+        <button
+          type="button"
+          onClick={() => onDelete(project)}
+          aria-label={`Delete ${project.name}`}
+          className={actionClass}
+        >
+          Delete
+        </button>
+      </div>
     </article>
   )
 }

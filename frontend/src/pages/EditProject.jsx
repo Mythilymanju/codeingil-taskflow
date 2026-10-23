@@ -25,7 +25,7 @@ export default function EditProject() {
 
   const handleSubmit = async (values) => {
     await updateProject(id, values)
-    navigate('/projects')
+    navigate('/projects', { state: { message: 'Project updated.' } })
   }
 
   return (
