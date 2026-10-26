@@ -755,6 +755,1933 @@
           "body": "{\n  \"status\": \"ok\",\n  \"app\": \"Codeingil TaskFlow\"\n}"
         }
       ]
+    },
+    {
+      "name": "Get_all_projects",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get_all_projects",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Oct 2026 07:35:04 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"current_page\": 1,\n  \"data\": [\n    {\n      \"id\": 22,\n      \"user_id\": 1,\n      \"name\": \"Eligendi nulla et\",\n      \"description\": \"Autem maxime ratione ab ut deleniti ad. In et dolorum qui neque unde recusandae. Fugit eos consequuntur optio dolores rerum. Rerum temporibus natus eaque neque.\",\n      \"status\": \"planned\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 21,\n      \"user_id\": 1,\n      \"name\": \"Laborum exercitationem deserunt\",\n      \"description\": \"Rerum perspiciatis alias quia similique sed fuga laudantium. Modi sunt ab aut nobis. Non ad eveniet et possimus qui provident.\",\n      \"status\": \"completed\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 20,\n      \"user_id\": 1,\n      \"name\": \"Ea et tempore\",\n      \"description\": \"Et officia repudiandae in. Quidem enim tempore sapiente. Occaecati omnis deleniti quia ab. Asperiores aut deserunt nesciunt occaecati illum.\",\n      \"status\": \"active\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 19,\n      \"user_id\": 1,\n      \"name\": \"Aspernatur fugiat esse\",\n      \"description\": \"Reiciendis soluta animi soluta dolorem rerum ducimus quas. Voluptatem ducimus minima corporis aut asperiores et dolorum.\",\n      \"status\": \"planned\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 18,\n      \"user_id\": 1,\n      \"name\": \"Quod esse consequatur\",\n      \"description\": \"Quo non porro commodi suscipit et. Magni id sint qui aut autem fugiat. Recusandae aut quia cumque expedita. Iusto dolorem earum velit quae aperiam consequatur omnis.\",\n      \"status\": \"planned\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 17,\n      \"user_id\": 1,\n      \"name\": \"Ut fugiat incidunt\",\n      \"description\": \"Consectetur accusantium perferendis excepturi magni. Temporibus laudantium omnis placeat quia nesciunt. Dolor iusto incidunt ut quo placeat dicta quia impedit. Totam omnis alias quo commodi.\",\n      \"status\": \"planned\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    }\n  ],\n  \"first_page_url\": \"http://127.0.0.1:8000/api/projects?page=1\",\n  \"from\": 1,\n  \"last_page\": 4,\n  \"last_page_url\": \"http://127.0.0.1:8000/api/projects?page=4\",\n  \"links\": [\n    {\n      \"url\": null,\n      \"label\": \"&laquo; Previous\",\n      \"page\": null,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=1\",\n      \"label\": \"1\",\n      \"page\": 1,\n      \"active\": true\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=2\",\n      \"label\": \"2\",\n      \"page\": 2,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=3\",\n      \"label\": \"3\",\n      \"page\": 3,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=4\",\n      \"label\": \"4\",\n      \"page\": 4,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=2\",\n      \"label\": \"Next &raquo;\",\n      \"page\": 2,\n      \"active\": false\n    }\n  ],\n  \"next_page_url\": \"http://127.0.0.1:8000/api/projects?page=2\",\n  \"path\": \"http://127.0.0.1:8000/api/projects\",\n  \"per_page\": 6,\n  \"prev_page_url\": null,\n  \"to\": 6,\n  \"total\": 22\n}"
+        }
+      ]
+    },
+    {
+      "name": "get_next_page",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects?page=2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get_next_page",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects?page=2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Oct 2026 07:40:40 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"current_page\": 2,\n  \"data\": [\n    {\n      \"id\": 16,\n      \"user_id\": 1,\n      \"name\": \"Omnis eos modi\",\n      \"description\": \"Natus deleniti ad optio facere molestiae quidem est. Aut quaerat modi enim beatae iure qui vero. Ut vitae nihil dolore delectus.\",\n      \"status\": \"active\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 15,\n      \"user_id\": 1,\n      \"name\": \"Quos consequatur laborum\",\n      \"description\": \"Enim debitis error ea officia ut doloremque sit neque. Molestiae quod neque quo modi distinctio ipsum sed rem. Inventore quis architecto aliquam incidunt. Itaque tenetur tenetur ea odit nam rerum.\",\n      \"status\": \"planned\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 14,\n      \"user_id\": 1,\n      \"name\": \"Velit debitis et\",\n      \"description\": \"Aliquid et dolores et aliquid consequatur. Sint sint blanditiis animi. Quidem ratione omnis quam odit eaque velit nemo. Quo amet earum enim eaque.\",\n      \"status\": \"active\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 13,\n      \"user_id\": 1,\n      \"name\": \"Ad et ipsam\",\n      \"description\": \"Qui ducimus dolores qui et rem. Est non laudantium nulla eveniet molestiae dignissimos. Nihil et ea eum aut.\",\n      \"status\": \"completed\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 12,\n      \"user_id\": 1,\n      \"name\": \"'l;kjhgc\",\n      \"description\": \"lkojiugy\",\n      \"status\": \"active\",\n      \"created_at\": \"2026-10-22T11:57:05.000000Z\",\n      \"updated_at\": \"2026-10-22T11:57:05.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 11,\n      \"user_id\": 1,\n      \"name\": \"dfghjesrdftgyuhjikfxcgvhbj\",\n      \"description\": \"sedcfvgbhnjkm\",\n      \"status\": \"planned\",\n      \"created_at\": \"2026-10-22T11:26:15.000000Z\",\n      \"updated_at\": \"2026-10-22T11:26:30.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    }\n  ],\n  \"first_page_url\": \"http://127.0.0.1:8000/api/projects?page=1\",\n  \"from\": 7,\n  \"last_page\": 4,\n  \"last_page_url\": \"http://127.0.0.1:8000/api/projects?page=4\",\n  \"links\": [\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=1\",\n      \"label\": \"&laquo; Previous\",\n      \"page\": 1,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=1\",\n      \"label\": \"1\",\n      \"page\": 1,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=2\",\n      \"label\": \"2\",\n      \"page\": 2,\n      \"active\": true\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=3\",\n      \"label\": \"3\",\n      \"page\": 3,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=4\",\n      \"label\": \"4\",\n      \"page\": 4,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?page=3\",\n      \"label\": \"Next &raquo;\",\n      \"page\": 3,\n      \"active\": false\n    }\n  ],\n  \"next_page_url\": \"http://127.0.0.1:8000/api/projects?page=3\",\n  \"path\": \"http://127.0.0.1:8000/api/projects\",\n  \"per_page\": 6,\n  \"prev_page_url\": \"http://127.0.0.1:8000/api/projects?page=1\",\n  \"to\": 12,\n  \"total\": 22\n}"
+        }
+      ]
+    },
+    {
+      "name": "show_only_2_project_per_page",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects?per_page=2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects"
+          ],
+          "query": [
+            {
+              "key": "per_page",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "show_only_2_project_per_page",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects?per_page=2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "per_page",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Oct 2026 07:44:37 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"current_page\": 1,\n  \"data\": [\n    {\n      \"id\": 22,\n      \"user_id\": 1,\n      \"name\": \"Eligendi nulla et\",\n      \"description\": \"Autem maxime ratione ab ut deleniti ad. In et dolorum qui neque unde recusandae. Fugit eos consequuntur optio dolores rerum. Rerum temporibus natus eaque neque.\",\n      \"status\": \"planned\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    },\n    {\n      \"id\": 21,\n      \"user_id\": 1,\n      \"name\": \"Laborum exercitationem deserunt\",\n      \"description\": \"Rerum perspiciatis alias quia similique sed fuga laudantium. Modi sunt ab aut nobis. Non ad eveniet et possimus qui provident.\",\n      \"status\": \"completed\",\n      \"created_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"updated_at\": \"2026-10-22T16:28:47.000000Z\",\n      \"user\": {\n        \"id\": 1,\n        \"name\": \"Demo User\"\n      }\n    }\n  ],\n  \"first_page_url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=1\",\n  \"from\": 1,\n  \"last_page\": 11,\n  \"last_page_url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=11\",\n  \"links\": [\n    {\n      \"url\": null,\n      \"label\": \"&laquo; Previous\",\n      \"page\": null,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=1\",\n      \"label\": \"1\",\n      \"page\": 1,\n      \"active\": true\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=2\",\n      \"label\": \"2\",\n      \"page\": 2,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=3\",\n      \"label\": \"3\",\n      \"page\": 3,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=4\",\n      \"label\": \"4\",\n      \"page\": 4,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=5\",\n      \"label\": \"5\",\n      \"page\": 5,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=6\",\n      \"label\": \"6\",\n      \"page\": 6,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=7\",\n      \"label\": \"7\",\n      \"page\": 7,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=8\",\n      \"label\": \"8\",\n      \"page\": 8,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=9\",\n      \"label\": \"9\",\n      \"page\": 9,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=10\",\n      \"label\": \"10\",\n      \"page\": 10,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=11\",\n      \"label\": \"11\",\n      \"page\": 11,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=2\",\n      \"label\": \"Next &raquo;\",\n      \"page\": 2,\n      \"active\": false\n    }\n  ],\n  \"next_page_url\": \"http://127.0.0.1:8000/api/projects?per_page=2&page=2\",\n  \"path\": \"http://127.0.0.1:8000/api/projects\",\n  \"per_page\": 2,\n  \"prev_page_url\": null,\n  \"to\": 2,\n  \"total\": 22\n}"
+        }
+      ]
+    },
+    {
+      "name": "search_project",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects?search=WEBSITE",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "WEBSITE"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "search_project",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects?search=webredesign",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "webredesign"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Oct 2026 07:48:56 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"current_page\": 1,\n  \"data\": [],\n  \"first_page_url\": \"http://127.0.0.1:8000/api/projects?search=webredesign&page=1\",\n  \"from\": null,\n  \"last_page\": 1,\n  \"last_page_url\": \"http://127.0.0.1:8000/api/projects?search=webredesign&page=1\",\n  \"links\": [\n    {\n      \"url\": null,\n      \"label\": \"&laquo; Previous\",\n      \"page\": null,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?search=webredesign&page=1\",\n      \"label\": \"1\",\n      \"page\": 1,\n      \"active\": true\n    },\n    {\n      \"url\": null,\n      \"label\": \"Next &raquo;\",\n      \"page\": null,\n      \"active\": false\n    }\n  ],\n  \"next_page_url\": null,\n  \"path\": \"http://127.0.0.1:8000/api/projects\",\n  \"per_page\": 6,\n  \"prev_page_url\": null,\n  \"to\": null,\n  \"total\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "no_match_search",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects?search=zzzz",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "zzzz"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "no_match_search",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects?search=zzzz",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "zzzz"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Oct 2026 07:54:25 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"current_page\": 1,\n  \"data\": [],\n  \"first_page_url\": \"http://127.0.0.1:8000/api/projects?search=zzzz&page=1\",\n  \"from\": null,\n  \"last_page\": 1,\n  \"last_page_url\": \"http://127.0.0.1:8000/api/projects?search=zzzz&page=1\",\n  \"links\": [\n    {\n      \"url\": null,\n      \"label\": \"&laquo; Previous\",\n      \"page\": null,\n      \"active\": false\n    },\n    {\n      \"url\": \"http://127.0.0.1:8000/api/projects?search=zzzz&page=1\",\n      \"label\": \"1\",\n      \"page\": 1,\n      \"active\": true\n    },\n    {\n      \"url\": null,\n      \"label\": \"Next &raquo;\",\n      \"page\": null,\n      \"active\": false\n    }\n  ],\n  \"next_page_url\": null,\n  \"path\": \"http://127.0.0.1:8000/api/projects\",\n  \"per_page\": 6,\n  \"prev_page_url\": null,\n  \"to\": null,\n  \"total\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "validation_test",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects?per_page=500",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects"
+          ],
+          "query": [
+            {
+              "key": "per_page",
+              "value": "500"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "validation_test",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects?per_page=500",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "per_page",
+                  "value": "500"
+                }
+              ]
+            }
+          },
+          "status": "Unprocessable Content",
+          "code": 422,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Oct 2026 07:56:29 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"The per page field must not be greater than 50.\",\n  \"errors\": {\n    \"per_page\": [\n      \"The per page field must not be greater than 50.\"\n    ]\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "invalid_input",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "invalid_input",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "status": "Unprocessable Content",
+          "code": 422,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Oct 2026 12:04:44 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"The name field is required. (and 1 more error)\",\n  \"errors\": {\n    \"name\": [\n      \"The name field is required.\"\n    ],\n    \"status\": [\n      \"The status field is required.\"\n    ]\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "delete_no_content",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/5",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "5"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "delete_no_content",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "5"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 04:32:47 GMT"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "project_1_tasks",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "2",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "project_1_tasks",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "2",
+                "tasks"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 04:40:40 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 4,\n      \"project_id\": 2,\n      \"title\": \"Suscipit cupiditate dolorem in\",\n      \"description\": \"Architecto voluptas et ab ut in.\",\n      \"status\": \"todo\",\n      \"priority\": \"medium\",\n      \"due_date\": null,\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    },\n    {\n      \"id\": 5,\n      \"project_id\": 2,\n      \"title\": \"Omnis ab aperiam ipsa\",\n      \"description\": null,\n      \"status\": \"done\",\n      \"priority\": \"high\",\n      \"due_date\": \"2026-12-07\",\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    },\n    {\n      \"id\": 6,\n      \"project_id\": 2,\n      \"title\": \"Quod et consequatur et\",\n      \"description\": null,\n      \"status\": \"todo\",\n      \"priority\": \"high\",\n      \"due_date\": \"2026-12-21\",\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    },\n    {\n      \"id\": 7,\n      \"project_id\": 2,\n      \"title\": \"Ratione adipisci reiciendis fugiat\",\n      \"description\": null,\n      \"status\": \"todo\",\n      \"priority\": \"low\",\n      \"due_date\": \"2026-10-27\",\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "create_task_for_project1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Design login page\",\r\n  \"description\": \"Wireframes first\",\r\n  \"status\": \"todo\",\r\n  \"priority\": \"high\",\r\n  \"due_date\": \"2026-11-15\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "2",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "create_task_for_project1",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Design login page\",\r\n  \"description\": \"Wireframes first\",\r\n  \"status\": \"todo\",\r\n  \"priority\": \"high\",\r\n  \"due_date\": \"2026-11-15\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "2",
+                "tasks"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 04:48:29 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": {\n    \"title\": \"Design login page\",\n    \"description\": \"Wireframes first\",\n    \"status\": \"todo\",\n    \"priority\": \"high\",\n    \"due_date\": \"2026-11-15\",\n    \"project_id\": 2,\n    \"updated_at\": \"2026-10-26T04:48:29.000000Z\",\n    \"created_at\": \"2026-10-26T04:48:29.000000Z\",\n    \"id\": 19\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "create_task_for_project4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Set up database\",\r\n  \"status\": \"in_progress\",\r\n  \"priority\": \"medium\",\r\n  \"due_date\": null\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/4/tasks",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "4",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "create_task_for_project4",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Set up database\",\r\n  \"status\": \"in_progress\",\r\n  \"priority\": \"medium\",\r\n  \"due_date\": null\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/4/tasks",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "4",
+                "tasks"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 04:53:17 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": {\n    \"title\": \"Set up database\",\n    \"status\": \"in_progress\",\n    \"priority\": \"medium\",\n    \"due_date\": null,\n    \"project_id\": 4,\n    \"updated_at\": \"2026-10-26T04:53:17.000000Z\",\n    \"created_at\": \"2026-10-26T04:53:17.000000Z\",\n    \"id\": 22\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get_project2_tasks",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "2",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get_project2_tasks",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "2",
+                "tasks"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 04:57:11 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 4,\n      \"project_id\": 2,\n      \"title\": \"Suscipit cupiditate dolorem in\",\n      \"description\": \"Architecto voluptas et ab ut in.\",\n      \"status\": \"todo\",\n      \"priority\": \"medium\",\n      \"due_date\": null,\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    },\n    {\n      \"id\": 5,\n      \"project_id\": 2,\n      \"title\": \"Omnis ab aperiam ipsa\",\n      \"description\": null,\n      \"status\": \"done\",\n      \"priority\": \"high\",\n      \"due_date\": \"2026-12-07\",\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    },\n    {\n      \"id\": 6,\n      \"project_id\": 2,\n      \"title\": \"Quod et consequatur et\",\n      \"description\": null,\n      \"status\": \"todo\",\n      \"priority\": \"high\",\n      \"due_date\": \"2026-12-21\",\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    },\n    {\n      \"id\": 7,\n      \"project_id\": 2,\n      \"title\": \"Ratione adipisci reiciendis fugiat\",\n      \"description\": null,\n      \"status\": \"todo\",\n      \"priority\": \"low\",\n      \"due_date\": \"2026-10-27\",\n      \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n      \"updated_at\": \"2026-10-25T15:23:14.000000Z\"\n    },\n    {\n      \"id\": 19,\n      \"project_id\": 2,\n      \"title\": \"Design login page\",\n      \"description\": \"Wireframes first\",\n      \"status\": \"todo\",\n      \"priority\": \"high\",\n      \"due_date\": \"2026-11-15\",\n      \"created_at\": \"2026-10-26T04:48:29.000000Z\",\n      \"updated_at\": \"2026-10-26T04:48:29.000000Z\"\n    },\n    {\n      \"id\": 20,\n      \"project_id\": 2,\n      \"title\": \"Design login page\",\n      \"description\": \"Wireframes first\",\n      \"status\": \"todo\",\n      \"priority\": \"high\",\n      \"due_date\": \"2026-11-15\",\n      \"created_at\": \"2026-10-26T04:50:27.000000Z\",\n      \"updated_at\": \"2026-10-26T04:50:27.000000Z\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "invalid_task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"\",\r\n  \"status\": \"finished\",\r\n  \"priority\": \"urgent\",\r\n  \"due_date\": \"tomorrow\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "2",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "invalid_task",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"\",\r\n  \"status\": \"finished\",\r\n  \"priority\": \"urgent\",\r\n  \"due_date\": \"tomorrow\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/2/tasks",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "2",
+                "tasks"
+              ]
+            }
+          },
+          "status": "Unprocessable Content",
+          "code": 422,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 04:59:10 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"The title field is required. (and 3 more errors)\",\n  \"errors\": {\n    \"title\": [\n      \"The title field is required.\"\n    ],\n    \"status\": [\n      \"The selected status is invalid.\"\n    ],\n    \"priority\": [\n      \"The selected priority is invalid.\"\n    ],\n    \"due_date\": [\n      \"The due date field must match the format Y-m-d.\"\n    ]\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "update_task",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Design login page\",\r\n  \"description\": \"Wireframes first\",\r\n  \"status\": \"in_progress\",\r\n  \"priority\": \"high\",\r\n  \"due_date\": \"2026-11-15\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/tasks/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "tasks",
+            "4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "update_task",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Design login page\",\r\n  \"description\": \"Wireframes first\",\r\n  \"status\": \"in_progress\",\r\n  \"priority\": \"high\",\r\n  \"due_date\": \"2026-11-15\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/tasks/4",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "tasks",
+                "4"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 05:02:46 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": {\n    \"id\": 4,\n    \"project_id\": 2,\n    \"title\": \"Design login page\",\n    \"description\": \"Wireframes first\",\n    \"status\": \"in_progress\",\n    \"priority\": \"high\",\n    \"due_date\": \"2026-11-15\",\n    \"created_at\": \"2026-10-25T15:23:14.000000Z\",\n    \"updated_at\": \"2026-10-26T05:02:46.000000Z\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "update_no_existent_task",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Design login page\",\n  \"description\": \"Wireframes first\",\n  \"status\": \"in_progress\",\n  \"priority\": \"high\",\n  \"due_date\": \"2026-11-15\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/tasks/999",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "tasks",
+            "999"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "update_no_existent_task",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Design login page\",\n  \"description\": \"Wireframes first\",\n  \"status\": \"in_progress\",\n  \"priority\": \"high\",\n  \"due_date\": \"2026-11-15\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/tasks/999",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "tasks",
+                "999"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 05:05:10 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"No query results for model [App\\\\Models\\\\Task] 999\",\n  \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n  \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n  \"line\": 668,\n  \"trace\": [\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n      \"line\": 616,\n      \"function\": \"prepareException\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n      \"line\": 51,\n      \"function\": \"render\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 224,\n      \"function\": \"handleException\",\n      \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 137,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 821,\n      \"function\": \"then\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 800,\n      \"function\": \"runRouteWithinStack\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 764,\n      \"function\": \"runRoute\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 753,\n      \"function\": \"dispatchToRoute\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 200,\n      \"function\": \"dispatch\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 180,\n      \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n      \"line\": 21,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n      \"line\": 31,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n      \"line\": 21,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n      \"line\": 51,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n      \"line\": 27,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n      \"line\": 109,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n      \"line\": 74,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n      \"line\": 58,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks.php\",\n      \"line\": 22,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePathEncoding.php\",\n      \"line\": 26,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePathEncoding\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 137,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 175,\n      \"function\": \"then\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 144,\n      \"function\": \"sendRequestThroughRouter\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Application.php\",\n      \"line\": 1220,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\public\\\\index.php\",\n      \"line\": 20,\n      \"function\": \"handleRequest\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Application\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n      \"line\": 23,\n      \"function\": \"require_once\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "get_tasks_for_nonexistent_tasks",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/999/tasks",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "999",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get_tasks_for_nonexistent_tasks",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/999/tasks",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "999",
+                "tasks"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 05:08:23 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"No query results for model [App\\\\Models\\\\Project] 999\",\n  \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n  \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n  \"line\": 668,\n  \"trace\": [\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n      \"line\": 616,\n      \"function\": \"prepareException\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n      \"line\": 51,\n      \"function\": \"render\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 224,\n      \"function\": \"handleException\",\n      \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 137,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 821,\n      \"function\": \"then\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 800,\n      \"function\": \"runRouteWithinStack\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 764,\n      \"function\": \"runRoute\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 753,\n      \"function\": \"dispatchToRoute\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 200,\n      \"function\": \"dispatch\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 180,\n      \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n      \"line\": 21,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n      \"line\": 31,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n      \"line\": 21,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n      \"line\": 51,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n      \"line\": 27,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n      \"line\": 109,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n      \"line\": 74,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n      \"line\": 58,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks.php\",\n      \"line\": 22,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePathEncoding.php\",\n      \"line\": 26,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePathEncoding\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 137,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 175,\n      \"function\": \"then\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 144,\n      \"function\": \"sendRequestThroughRouter\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Application.php\",\n      \"line\": 1220,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\public\\\\index.php\",\n      \"line\": 20,\n      \"function\": \"handleRequest\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Application\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n      \"line\": 23,\n      \"function\": \"require_once\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "delete_task",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/tasks/5",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "tasks",
+            "5"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "delete_task",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/tasks/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "tasks",
+                "5"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 05:16:14 GMT"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "delete_project",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/projects/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "projects",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "delete_project",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "2"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 05:19:25 GMT"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        },
+        {
+          "name": "delete_project",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "2"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.28"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Oct 2026 05:20:58 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"No query results for model [App\\\\Models\\\\Project] 2\",\n  \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n  \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n  \"line\": 668,\n  \"trace\": [\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n      \"line\": 616,\n      \"function\": \"prepareException\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n      \"line\": 51,\n      \"function\": \"render\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 224,\n      \"function\": \"handleException\",\n      \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 137,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 821,\n      \"function\": \"then\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 800,\n      \"function\": \"runRouteWithinStack\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 764,\n      \"function\": \"runRoute\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n      \"line\": 753,\n      \"function\": \"dispatchToRoute\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 200,\n      \"function\": \"dispatch\",\n      \"class\": \"Illuminate\\\\Routing\\\\Router\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 180,\n      \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n      \"line\": 21,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n      \"line\": 31,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n      \"line\": 21,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n      \"line\": 51,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n      \"line\": 27,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n      \"line\": 109,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n      \"line\": 74,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n      \"line\": 58,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks.php\",\n      \"line\": 22,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\InvokeDeferredCallbacks\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\ValidatePathEncoding.php\",\n      \"line\": 26,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 219,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\ValidatePathEncoding\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n      \"line\": 137,\n      \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 175,\n      \"function\": \"then\",\n      \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n      \"line\": 144,\n      \"function\": \"sendRequestThroughRouter\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Application.php\",\n      \"line\": 1220,\n      \"function\": \"handle\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\public\\\\index.php\",\n      \"line\": 20,\n      \"function\": \"handleRequest\",\n      \"class\": \"Illuminate\\\\Foundation\\\\Application\",\n      \"type\": \"->\"\n    },\n    {\n      \"file\": \"C:\\\\Users\\\\acer\\\\OneDrive\\\\Desktop\\\\codeingil-taskflow\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n      \"line\": 23,\n      \"function\": \"require_once\"\n    }\n  ]\n}"
+        }
+      ]
     }
   ]
 }

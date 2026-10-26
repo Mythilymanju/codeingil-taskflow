@@ -17,7 +17,7 @@ class ProjectController extends Controller
         'per_page' => ['nullable', 'integer', 'min:1', 'max:50'],
     ]);
 
-    $query = Project::with('user:id,name');
+    $query = Project::with('user:id,name')->withCount('tasks');
 
     $search = trim((string) $request->query('search', ''));
     if ($search !== '') {
@@ -37,7 +37,7 @@ class ProjectController extends Controller
 
     public function show(Project $project)
     {
-        $project->load('user:id,name');
+        $project->load('user:id,name')->loadCount('tasks');
 
         return response()->json(['data' => $project]);
     }
