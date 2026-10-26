@@ -29,6 +29,7 @@ API base URL: http://127.0.0.1:8000/api
 - Day 2: projects table, seeder, GET list/detail endpoints, Projects page
 - Day 3: create and edit projects with server-side validation and inline form errors
 - Day 4: delete, search, pagination, success and error feedback
+- Day 5: tasks table, project-task relationship, nested task endpoints, project detail page
 
 ## Day 1 Evidence
 
@@ -102,3 +103,28 @@ API base URL: http://127.0.0.1:8000/api
 ![Postman 204](docs/screenshots/day-04-postman-delete-204.png)
 
 
+## Day 5 Evidence
+
+### Project 1 and its tasks
+![Project 1 tasks](docs/screenshots/day-05-project-1-tasks.png)
+
+### Project 2 and its tasks (different from project 1)
+![Project 2 tasks](docs/screenshots/day-05-project-2-tasks.png)
+
+### Task form with inline validation error
+![Task form error](docs/screenshots/day-05-task-form-error.png)
+
+### Postman: 201 (task created, with project_id)
+![Postman create task](docs/screenshots/day-05-postman-create-task.png)
+
+### Postman: 422 (invalid status, priority and due date)
+![Postman 422](docs/screenshots/day-05-postman-422.png)
+
+### Postman: 204 (successful task delete)
+![Postman 204](docs/screenshots/day-05-postman-delete-task-204.png)
+
+### Postman: 404 after deleting a project (cascade)
+![Postman cascade](docs/screenshots/day-05-postman-cascade.png)
+
+### Foreign key constraint (orphan task rejected by MySQL)
+![Foreign key error](docs/screenshots/day-05-fk-error.png)

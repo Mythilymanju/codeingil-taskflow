@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
 import CreateProject from './pages/CreateProject'
 import EditProject from './pages/EditProject'
+import ProjectDetail from './pages/ProjectDetail'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/new" element={<CreateProject />} />
         <Route path="/projects/:id/edit" element={<EditProject />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
         
       </Routes>
     </Layout>
