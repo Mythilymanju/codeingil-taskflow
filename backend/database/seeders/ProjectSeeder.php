@@ -12,15 +12,19 @@ class ProjectSeeder extends Seeder
 {
     public function run(): void
     {
-        $user = User::firstOrCreate(
+        $demo = User::firstOrCreate(
             ['email' => 'demo@codeingil.test'],
             ['name' => 'Demo User', 'password' => Hash::make('password')]
         );
 
-        $projects = Project::factory()->count(5)->for($user)->create();
+        $other = User::firstOrCreate(
+            ['email' => 'other@codeingil.test'],
+            ['name' => 'Other User', 'password' => Hash::make('password')]
+        );
 
-        foreach ($projects as $project) {
-            Task::factory()->count(rand(2, 4))->for($project)->create();
+        foreach ([[$demo, 5], [$other, 3]] as [$user, $count]) {
+            Project::factory()->count($count)->for($user)->create()
+                ->each(fn (Project $project) => Task::factory()->count(rand(2, 4))->for($project)->create());
         }
     }
 }

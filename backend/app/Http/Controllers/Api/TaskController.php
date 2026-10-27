@@ -6,12 +6,15 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\Rule;
 
 class TaskController extends Controller
 {
     public function index(Project $project)
     {
+        Gate::authorize('view', $project);
+
         $tasks = $project->tasks()->orderBy('id')->get();
 
         return response()->json(['data' => $tasks]);
@@ -19,6 +22,8 @@ class TaskController extends Controller
 
     public function store(Request $request, Project $project)
     {
+        Gate::authorize('update', $project);
+
         $task = $project->tasks()->create($request->validate($this->rules()));
 
         return response()->json(['data' => $task], 201);
@@ -26,6 +31,8 @@ class TaskController extends Controller
 
     public function update(Request $request, Task $task)
     {
+        Gate::authorize('update', $task);
+
         $task->update($request->validate($this->rules()));
 
         return response()->json(['data' => $task]);
@@ -33,6 +40,8 @@ class TaskController extends Controller
 
     public function destroy(Task $task)
     {
+        Gate::authorize('delete', $task);
+
         $task->delete();
 
         return response()->noContent();
