@@ -27,12 +27,15 @@ export default function ProjectCard({ project, onDelete }) {
           {project.status}
         </span>
       </div>
+      <div>
       <p className="text-sm text-black/70">
         {project.description || 'No description'}
         <p className="text-xs text-black/60">
   {project.tasks_count ?? 0} task{project.tasks_count === 1 ? '' : 's'}
 </p>
+
       </p>
+      </div>
       {project.user && (
         <p className="text-xs text-black/60">Owner: {project.user.name}</p>
       )}

@@ -30,6 +30,7 @@ API base URL: http://127.0.0.1:8000/api
 - Day 3: create and edit projects with server-side validation and inline form errors
 - Day 4: delete, search, pagination, success and error feedback
 - Day 5: tasks table, project-task relationship, nested task endpoints, project detail page
+- Day 6: Sanctum SPA session auth, register/login/logout, policies and owner-scoped queries, protected routes
 
 ## Day 1 Evidence
 
@@ -128,3 +129,27 @@ API base URL: http://127.0.0.1:8000/api
 
 ### Foreign key constraint (orphan task rejected by MySQL)
 ![Foreign key error](docs/screenshots/day-05-fk-error.png)
+
+## Day 6 Evidence
+
+### Login page
+![Login page](docs/screenshots/day-06-login.png)
+
+### Register page with validation error
+![Register page](docs/screenshots/day-06-register.png)
+
+### User A sees only their own projects
+![User A projects](docs/screenshots/day-06-user-a-projects.png)
+
+### User B sees a different list
+![User B projects](docs/screenshots/day-06-user-b-projects.png)
+
+### User B opens User A's project (404, no information leaked)
+![Project not found](docs/screenshots/day-06-ui-not-found.png)
+
+### Postman: 401 (guest cannot access protected endpoint)
+![Postman 401](docs/screenshots/day-06-postman-401.png)
+
+### Postman: 200 (login)
+![Postman login](docs/screenshots/day-06-postman-login.png)
+

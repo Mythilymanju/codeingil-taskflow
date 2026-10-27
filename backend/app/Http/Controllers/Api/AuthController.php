@@ -18,7 +18,7 @@ class AuthController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        $user = User::create($validated); // the password is hashed by the model's cast
+        $user = User::create($validated);
 
         Auth::login($user);
         $request->session()->regenerate();

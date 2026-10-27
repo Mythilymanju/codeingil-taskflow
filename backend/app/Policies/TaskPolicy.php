@@ -23,7 +23,6 @@ class TaskPolicy
         return $this->owner($user, $task);
     }
 
-    // a task belongs to a project, and the project has the owner
     private function owner(User $user, Task $task): Response
     {
         return $task->project->user_id === $user->id
