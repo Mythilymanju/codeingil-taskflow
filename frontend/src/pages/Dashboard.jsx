@@ -11,6 +11,7 @@ import ProgressBar from '../components/ProgressBar'
 import TaskFilters from '../components/TaskFilters'
 import TaskTable from '../components/TaskTable'
 import RecentTasks from '../components/RecentTasks'
+import { getErrorMessage } from '../utils/errors'
 
 const EMPTY_FILTERS = { project_id: '', status: '', priority: '' }
 
@@ -65,13 +66,8 @@ export default function Dashboard() {
         setTasks(t.data)
         // If a status change emptied this page, step back one page
         if (t.data.data.length === 0 && page > 1) setPage((p) => p - 1)
-      } catch (e) {
-        if (!ignore) {
-          setError(
-            e.response?.data?.message ||
-              'Could not load the dashboard. Are you logged in and is the API running?'
-          )
-        }
+            } catch (e) {
+        if (!ignore) setError(getErrorMessage(e))
       } finally {
         if (!ignore) setLoading(false)
       }
@@ -95,8 +91,8 @@ export default function Dashboard() {
     try {
       await updateTaskStatus(task.id, status)
       setRefreshKey((k) => k + 1) // refetch BOTH stats and list
-    } catch (e) {
-      setError(e.response?.data?.message || 'Could not update the task status.')
+         } catch (e) {
+      setError(getErrorMessage(e))
     } finally {
       setSavingId(null)
     }
@@ -115,7 +111,7 @@ export default function Dashboard() {
     </div>
   )
 
-  if (!stats && loading) return <p className="state">Loading dashboard…</p>
+  if (!stats && loading) return <p className="state" role="status">Loading dashboard…</p>
 
   if (!stats && error) {
     return (
@@ -135,7 +131,7 @@ export default function Dashboard() {
     <section className="dashboard">
       <header className="dash-head">
         <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
-        {loading && <span className="syncing">Updating…</span>}
+          {loading && <span className="syncing" role="status">Updating…</span>}
       </header>
 
       {error && (

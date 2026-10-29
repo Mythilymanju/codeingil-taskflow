@@ -1,25 +1,22 @@
 import { useState } from 'react'
+import FieldError from './FieldError'
+import { getErrorMessage, getFieldErrors } from '../utils/errors'
 
 const STATUSES = ['planned', 'active', 'completed']
 
 const inputClass = (hasError) =>
-  `w-full rounded border px-3 py-2 bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand ${
-    hasError ? 'border-coral border-2' : 'border-black/30'
+  `w-full rounded border px-3 py-2 bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ink ${
+    hasError ? 'border-coral border-2' : 'border-ink/60'
   }`
 
-function FieldError({ id, messages }) {
-  if (!messages) return null
-  return (
-    <p id={id} className="mt-1 text-sm font-semibold text-ink">
-      ⚠ {messages[0]}
-    </p>
-  )
-}
-
 export default function ProjectForm({ initialValues, onSubmit, submitLabel }) {
-  const [values, setValues] = useState(initialValues)
+  const [values, setValues] = useState({
+    name: initialValues?.name ?? '',
+    description: initialValues?.description ?? '',
+    status: initialValues?.status ?? 'planned',
+  })
   const [errors, setErrors] = useState({})
-  const [formError, setFormError] = useState(null)
+  const [formError, setFormError] = useState('')
   const [saving, setSaving] = useState(false)
 
   const handleChange = (e) => {
@@ -29,27 +26,27 @@ export default function ProjectForm({ initialValues, onSubmit, submitLabel }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (saving) return // blocks double submit
     setSaving(true)
     setErrors({})
-    setFormError(null)
+    setFormError('')
 
     try {
       await onSubmit(values)
     } catch (err) {
-      if (err.response?.status === 422) {
-        setErrors(err.response.data.errors)
-      } else {
-        setFormError('Something went wrong. Please try again.')
-      }
+      setErrors(getFieldErrors(err))
+      setFormError(getErrorMessage(err))
+    } finally {
       setSaving(false)
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-4">
+    <form onSubmit={handleSubmit} noValidate aria-busy={saving} className="space-y-4">
       {formError && (
-        <p role="alert" className="font-semibold">
-          ⚠ {formError}
+        <p role="alert" className="rounded border-2 border-coral bg-white px-3 py-2 font-semibold">
+          <span aria-hidden="true" className="text-coral">⚠ </span>
+          {formError}
         </p>
       )}
 
@@ -63,6 +60,7 @@ export default function ProjectForm({ initialValues, onSubmit, submitLabel }) {
           type="text"
           value={values.name}
           onChange={handleChange}
+          aria-required="true"
           aria-invalid={Boolean(errors.name)}
           aria-describedby={errors.name ? 'name-error' : undefined}
           className={inputClass(errors.name)}
@@ -112,9 +110,9 @@ export default function ProjectForm({ initialValues, onSubmit, submitLabel }) {
       <button
         type="submit"
         disabled={saving}
-        className="rounded bg-brand text-ink font-semibold px-4 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink disabled:opacity-60"
+        className="rounded bg-brand text-ink font-semibold px-4 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 disabled:opacity-60"
       >
-        {saving ? 'Saving...' : submitLabel}
+        {saving ? 'Saving…' : submitLabel}
       </button>
     </form>
   )
