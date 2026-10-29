@@ -209,3 +209,26 @@
   .dashboard select,
   .dashboard button { transition: none; }
 }
+
+.field-error { 
+  color: var(--color-ink); 
+  font-size: .85rem; 
+  margin-top: .25rem; 
+}
+.field-error::before { 
+  content: '⚠ '; 
+  color: var(--color-coral); 
+}
+.form-error { 
+  color: var(--color-ink); 
+  background: #fff; 
+  border: 1px solid var(--color-coral);
+  border-left: 6px solid var(--color-coral); 
+  border-radius: 8px; 
+  padding: .75rem 1rem; 
+  margin-bottom: 1rem; 
+}
+input[aria-invalid='true'],
+textarea[aria-invalid='true'], 
+select[aria-invalid='true'] { border-color: var(--color-coral); 
+}
