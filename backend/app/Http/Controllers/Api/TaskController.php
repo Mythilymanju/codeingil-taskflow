@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreTaskRequest;
+use App\Http\Requests\UpdateTaskRequest;
+use App\Http\Resources\TaskResource;
 use App\Models\Project;
 use App\Models\Task;
 use Illuminate\Http\Request;
@@ -16,9 +19,9 @@ class TaskController extends Controller
     {
         Gate::authorize('view', $project);
 
-        $tasks = $project->tasks()->orderBy('id')->get();
-
-        return response()->json(['data' => $tasks]);
+        return TaskResource::collection(
+            $project->tasks()->orderBy('id')->get()
+        );
     }
 
     // Day 7: all of the user's tasks with filters (GET /api/tasks)
@@ -33,6 +36,7 @@ class TaskController extends Controller
             'per_page'   => ['nullable', 'integer', 'min:1', 'max:50'],
         ]);
 
+        // ->through() keeps the paginator shape (total, last_page) that the dashboard reads
         return Task::ownedBy($userId)
             ->with('project:id,name')
             ->when($filters['project_id'] ?? null, fn ($q, $v) => $q->where('project_id', $v))
@@ -40,25 +44,24 @@ class TaskController extends Controller
             ->when($filters['priority'] ?? null,   fn ($q, $v) => $q->where('priority', $v))
             ->latest('updated_at')
             ->paginate($filters['per_page'] ?? 10)
+            ->through(fn ($task) => TaskResource::make($task)->resolve())
             ->withQueryString();
     }
 
-    public function store(Request $request, Project $project)
+    // POST /api/projects/{project}/tasks (authorization + validation live in StoreTaskRequest)
+    public function store(StoreTaskRequest $request, Project $project)
     {
-        Gate::authorize('update', $project);
+        $task = $project->tasks()->create($request->validated());
 
-        $task = $project->tasks()->create($request->validate($this->rules()));
-
-        return response()->json(['data' => $task], 201);
+        return TaskResource::make($task)->response()->setStatusCode(201);
     }
 
-    public function update(Request $request, Task $task)
+    // PUT /api/tasks/{task} (authorization + validation live in UpdateTaskRequest)
+    public function update(UpdateTaskRequest $request, Task $task)
     {
-        Gate::authorize('update', $task);
+        $task->update($request->validated());
 
-        $task->update($request->validate($this->rules()));
-
-        return response()->json(['data' => $task]);
+        return TaskResource::make($task);
     }
 
     // Day 7: change only the status (PATCH /api/tasks/{task}/status)
@@ -72,9 +75,10 @@ class TaskController extends Controller
 
         $task->update($data);
 
-        return response()->json(['data' => $task->load('project:id,name')]);
+        return TaskResource::make($task->load('project:id,name'));
     }
 
+    // DELETE /api/tasks/{task}
     public function destroy(Task $task)
     {
         Gate::authorize('delete', $task);
@@ -82,16 +86,5 @@ class TaskController extends Controller
         $task->delete();
 
         return response()->noContent();
-    }
-
-    private function rules(): array
-    {
-        return [
-            'title' => ['required', 'string', 'max:150'],
-            'description' => ['nullable', 'string'],
-            'status' => ['required', Rule::in(Task::STATUSES)],
-            'priority' => ['required', Rule::in(Task::PRIORITIES)],
-            'due_date' => ['nullable', 'date_format:Y-m-d'],
-        ];
     }
 }
