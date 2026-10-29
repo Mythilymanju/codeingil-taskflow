@@ -31,6 +31,7 @@ API base URL: http://127.0.0.1:8000/api
 - Day 4: delete, search, pagination, success and error feedback
 - Day 5: tasks table, project-task relationship, nested task endpoints, project detail page
 - Day 6: Sanctum SPA session auth, register/login/logout, policies and owner-scoped queries, protected routes
+- Day 7: Dashboard statistics endpoint, task filtering by project/status/priority, user-scoped counts, KPI cards, completion progress, recent tasks and responsive dashboard layout; verified count consistency and dynamic filter updates after task status changes.
 
 ## Day 1 Evidence
 
@@ -153,3 +154,7 @@ API base URL: http://127.0.0.1:8000/api
 ### Postman: 200 (login)
 ![Postman login](docs/screenshots/day-06-postman-login.png)
 
+## Day 7 Evidence
+
+### Dashboard KPI cards
+![Dashboard](docs/screenshots/day-07-dashboard-kpis.png)

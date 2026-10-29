@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Builder;
 
 class Task extends Model
 {
@@ -25,5 +26,10 @@ class Task extends Model
     public function project(): BelongsTo
     {
         return $this->belongsTo(Project::class);
+    }
+
+     public function scopeOwnedBy(Builder $query, int $userId): Builder
+    {
+        return $query->whereHas('project', fn ($p) => $p->where('user_id', $userId));
     }
 }
