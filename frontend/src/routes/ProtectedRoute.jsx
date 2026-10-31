@@ -1,4 +1,5 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
+import ErrorBanner from '../components/ErrorBanner'
 import { useAuth } from '../hooks/useAuth'
 
 export default function ProtectedRoute() {
@@ -17,20 +18,7 @@ export default function ProtectedRoute() {
   if (authError) {
     return (
       <div className="p-6 max-w-md">
-        <p
-          role="alert"
-          className="rounded border-2 border-coral bg-white px-3 py-2 font-semibold"
-        >
-          <span aria-hidden="true" className="text-coral">⚠ </span>
-          {authError}
-        </p>
-        <button
-          type="button"
-          onClick={retry}
-          className="mt-3 rounded bg-brand text-ink font-semibold px-4 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2"
-        >
-          Try again
-        </button>
+        <ErrorBanner onRetry={retry}>{authError}</ErrorBanner>
       </div>
     )
   }

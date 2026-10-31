@@ -6,6 +6,7 @@ import {
   getTasks,
   updateTaskStatus,
 } from '../services/api'
+import ErrorBanner from '../components/ErrorBanner'
 import KpiCard from '../components/KpiCard'
 import ProgressBar from '../components/ProgressBar'
 import TaskFilters from '../components/TaskFilters'
@@ -30,9 +31,9 @@ export default function Dashboard() {
   const [savingId, setSavingId] = useState(null)
   const [refreshKey, setRefreshKey] = useState(0)
 
-  // Your Day 1 health check, kept as a small card
+  // Day 1 health check, kept as a small card
   const [health, setHealth] = useState(null)
-  const [healthError, setHealthError] = useState(null)
+  const [healthError, setHealthError] = useState('')
 
   useEffect(() => {
     getHealth()
@@ -66,7 +67,7 @@ export default function Dashboard() {
         setTasks(t.data)
         // If a status change emptied this page, step back one page
         if (t.data.data.length === 0 && page > 1) setPage((p) => p - 1)
-            } catch (e) {
+      } catch (e) {
         if (!ignore) setError(getErrorMessage(e))
       } finally {
         if (!ignore) setLoading(false)
@@ -91,7 +92,7 @@ export default function Dashboard() {
     try {
       await updateTaskStatus(task.id, status)
       setRefreshKey((k) => k + 1) // refetch BOTH stats and list
-         } catch (e) {
+    } catch (e) {
       setError(getErrorMessage(e))
     } finally {
       setSavingId(null)
@@ -101,7 +102,7 @@ export default function Dashboard() {
   const healthCard = (
     <div className="bg-white rounded-lg shadow p-4 max-w-md mt-6">
       <h3 className="text-lg font-bold mb-2">API Health</h3>
-      {healthError && <p className="text-coral">{healthError}</p>}
+      {healthError && <ErrorBanner>{healthError}</ErrorBanner>}
       {health && (
         <p>
           Status: <strong>{health.status}</strong> · App:{' '}
@@ -111,13 +112,19 @@ export default function Dashboard() {
     </div>
   )
 
-  if (!stats && loading) return <p className="state" role="status">Loading dashboard…</p>
+  if (!stats && loading) {
+    return (
+      <p className="state" role="status">
+        Loading dashboard…
+      </p>
+    )
+  }
 
   if (!stats && error) {
     return (
       <section>
         <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
-        <p className="state error">{error}</p>
+        <ErrorBanner onRetry={() => setRefreshKey((k) => k + 1)}>{error}</ErrorBanner>
         {healthCard}
       </section>
     )
@@ -131,14 +138,14 @@ export default function Dashboard() {
     <section className="dashboard">
       <header className="dash-head">
         <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
-          {loading && <span className="syncing" role="status">Updating…</span>}
+        {loading && (
+          <span className="syncing" role="status">
+            Updating…
+          </span>
+        )}
       </header>
 
-      {error && (
-        <p className="state error" role="alert">
-          {error}
-        </p>
-      )}
+      <ErrorBanner>{error}</ErrorBanner>
 
       <div className="kpi-grid">
         <KpiCard label="Projects" value={stats.projects_count} />
