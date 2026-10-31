@@ -33,6 +33,7 @@ API base URL: http://127.0.0.1:8000/api
 - Day 6: Sanctum SPA session auth, register/login/logout, policies and owner-scoped queries, protected routes
 - Day 7: Dashboard statistics endpoint, task filtering by project/status/priority, user-scoped counts, KPI cards, completion progress, recent tasks and responsive dashboard layout; verified count consistency and dynamic filter updates after task status changes.
 - Day 8: Form Requests and API Resources, feature tests (36 passing), cascade delete, accessible forms, plain-language error states, Vitest tests
+- Day 9: N+1 and query-count tests, performance indexes, policy coverage test, logging, shared form components, keyboard and responsive polish, fresh-setup verification, production build
 
 ## Day 1 Evidence
 
@@ -178,4 +179,13 @@ API base URL: http://127.0.0.1:8000/api
 ### Mobile layout (375 px)
 ![Mobile layout](docs/screenshots/day-08-mobile.png)
 
+
+## Day 9 Evidence
+
+### Backend test suite (38 passing)
+![Backend tests](docs/screenshots/day-09-backend-tests.png)
+
+### Frontend tests and production build
+![Frontend tests](docs/screenshots/day-09-frontend-tests.png)
+![Production build](docs/screenshots/day-09-build.png)
 
