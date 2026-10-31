@@ -2,30 +2,33 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Validation\Rule;
 
 class UpdateProjectRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
         Gate::authorize('update', $this->route('project'));
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [
-            //
+            'name'        => ['required', 'string', 'max:150'],
+            'description' => ['nullable', 'string'],
+            'status'      => ['required', Rule::in(['planned', 'active', 'completed'])],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Please enter a project name.',
+            'name.max'      => 'The project name can be at most 150 characters.',
+            'status.in'     => 'Status must be planned, active or completed.',
         ];
     }
 }

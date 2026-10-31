@@ -10,6 +10,7 @@ use App\Models\Project;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
 
 class TaskController extends Controller
@@ -73,15 +74,28 @@ class TaskController extends Controller
             'status' => ['required', Rule::in(Task::STATUSES)],
         ]);
 
+        $old = $task->status;
         $task->update($data);
+
+        Log::info('task.status_changed', [
+            'task_id' => $task->id,
+            'from'    => $old,
+            'to'      => $task->status,
+            'user_id' => $request->user()->id,
+        ]);
 
         return TaskResource::make($task->load('project:id,name'));
     }
 
     // DELETE /api/tasks/{task}
-    public function destroy(Task $task)
+    public function destroy(Request $request, Task $task)
     {
         Gate::authorize('delete', $task);
+
+        Log::info('task.deleted', [
+            'task_id' => $task->id,
+            'user_id' => $request->user()->id,
+        ]);
 
         $task->delete();
 
